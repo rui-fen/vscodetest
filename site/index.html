@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vscodetest · 冒泡排序</title>
+    <style>
+      :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      body { margin: 0; background: #f8fafc; color: #172033; }
+      main { width: min(720px, calc(100% - 48px)); margin: 72px auto; }
+      h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: .4rem; }
+      .lead { color: #526078; font-size: 1.125rem; line-height: 1.7; }
+      section { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; margin-top: 28px; box-shadow: 0 8px 24px #1720330d; }
+      pre { overflow-x: auto; padding: 16px; border-radius: 10px; background: #172033; color: #e8edf7; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      a { color: #2563eb; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>冒泡排序示例</h1>
+      <p class="lead">一个返回新列表、并在数据已有序时提前退出的 Python 冒泡排序实现。</p>
+
+      <section>
+        <h2>使用方式</h2>
+        <pre><code>from bubble_sort import bubble_sort
+
+sorted_list = bubble_sort([5, 3, 8, 4, 2])
+# [2, 3, 4, 5, 8]</code></pre>
+      </section>
+
+      <section>
+        <h2>质量保障</h2>
+        <p>GitHub Actions 会在 Pull Request 和主分支更新时执行多版本 Python 测试、Ruff lint、覆盖率报告和依赖安全扫描。</p>
+        <p><a href="https://github.com/rui-fen/vscodetest">查看源代码与 CI 配置</a></p>
+      </section>
+    </main>
+  </body>
+</html>

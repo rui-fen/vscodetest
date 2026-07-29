@@ -36,15 +36,25 @@ sorted_list = bubble_sort([5, 3, 8, 4, 2])
 推送到 `main` 或 `master` 分支、以及针对这些分支创建 Pull Request 时，GitHub Actions 会自动执行：
 
 - Python 3.9、3.10、3.11、3.12 的兼容性测试
+- Ruff 静态检查
 - 源码编译检查
-- `unittest` 单元测试
+- 带 coverage 报告的 `unittest` 单元测试（报告作为 CI 构件上传）
+- 使用 `pip-audit` 扫描已安装依赖的已知安全漏洞
 
 本地可用以下命令运行与流水线相同的测试：
 
 ```bash
 python -m py_compile bubble_sort.py test_bubble_sort.py
-python -m unittest discover -v
+python -m pip install ruff coverage pip-audit
+ruff check .
+coverage run -m unittest discover -v
+coverage report --show-missing
+pip-audit --strict
 ```
+
+## GitHub Pages
+
+项目主页位于 GitHub Pages。`main` 分支更新后，部署工作流会将 [`site/`](site/) 中的静态站点发布到 Pages。
 
 ## 算法说明
 
