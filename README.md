@@ -31,21 +31,6 @@ from bubble_sort import bubble_sort
 sorted_list = bubble_sort([5, 3, 8, 4, 2])
 ```
 
-## CI 自动化测试
-
-推送到 `main` 或 `master` 分支、以及针对这些分支创建 Pull Request 时，GitHub Actions 会自动执行：
-
-- Python 3.9、3.10、3.11、3.12 的兼容性测试
-- 源码编译检查
-- `unittest` 单元测试
-
-本地可用以下命令运行与流水线相同的测试：
-
-```bash
-python -m py_compile bubble_sort.py test_bubble_sort.py
-python -m unittest discover -v
-```
-
 ## 算法说明
 
 冒泡排序重复遍历列表，比较相邻元素并在顺序错误时交换。每轮结束后，当前未排序部分中的最大值会“冒泡”到末尾。本实现带有 `swapped` 标志：当一轮内无交换时，说明已全部有序，可立即停止。
