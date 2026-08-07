@@ -9,3 +9,8 @@ dependencies = [
      "pytest>=9.1.1",
      "uvicorn",
 ]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.15.3",
+]

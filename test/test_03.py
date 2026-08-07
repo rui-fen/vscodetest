@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from enum import Enum
 
+app = FastAPI()
+
 class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
